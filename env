@@ -1,0 +1,20 @@
+# Telegram Bot Configuration
+# Copy this file to .env and fill in your actual values
+
+# Bot Token from @BotFather
+# Your bot is available at: t.me/winlincommunity_bot
+BOT_TOKEN=8274287483:AAGiWpxtfRo7ByLagTdH1Cy_TNLths3wCSs
+
+# Webhook URL (for production, use your Vercel URL)
+WEBHOOK_URL=https://your-app-name.vercel.app
+
+# Optional: Node Environment
+NODE_ENV=production
+
+# Optional: Port for local development
+PORT=3000
+
+# Bot Information:
+# - Bot Username: @winlincommunity_bot
+# - Bot URL: t.me/winlincommunity_bot
+# - Token: 8274287483:AAGiWpxtfRo7ByLagTdH1Cy_TNLths3wCSs

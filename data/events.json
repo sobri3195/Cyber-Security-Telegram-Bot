@@ -1,0 +1,60 @@
+{
+  "events": [
+    {
+      "name": "DEF CON",
+      "date": "August 2024",
+      "location": "Las Vegas, USA",
+      "description": "Konferensi hacker terbesar di dunia yang membahas keamanan komputer dan hacking.",
+      "website": "https://defcon.org"
+    },
+    {
+      "name": "Black Hat USA",
+      "date": "August 2024",
+      "location": "Las Vegas, USA",
+      "description": "Konferensi keamanan informasi yang menghadirkan para ahli keamanan terkemuka.",
+      "website": "https://blackhat.com"
+    },
+    {
+      "name": "RSA Conference",
+      "date": "May 2024",
+      "location": "San Francisco, USA",
+      "description": "Konferensi keamanan informasi terbesar dengan fokus pada solusi enterprise.",
+      "website": "https://rsaconference.com"
+    },
+    {
+      "name": "BSides",
+      "date": "Various dates",
+      "location": "Multiple cities worldwide",
+      "description": "Konferensi keamanan komunitas yang lebih informal dan terjangkau.",
+      "website": "https://securitybsides.com"
+    },
+    {
+      "name": "HITB",
+      "date": "Various dates",
+      "location": "Multiple cities in Asia",
+      "description": "Hack In The Box - konferensi keamanan yang fokus pada Asia.",
+      "website": "https://conference.hitb.org"
+    },
+    {
+      "name": "Pwn2Own",
+      "date": "March 2024",
+      "location": "Vancouver, Canada",
+      "description": "Kompetisi hacking yang menantang para peneliti keamanan untuk menemukan kerentanan.",
+      "website": "https://pwn2own.com"
+    },
+    {
+      "name": "Nullcon",
+      "date": "February 2024",
+      "location": "Goa, India",
+      "description": "Konferensi keamanan informasi yang diadakan di India.",
+      "website": "https://nullcon.net"
+    },
+    {
+      "name": "Hack In Paris",
+      "date": "June 2024",
+      "location": "Paris, France",
+      "description": "Konferensi keamanan yang diadakan di Paris dengan fokus pada hacking dan keamanan.",
+      "website": "https://hackinparis.com"
+    }
+  ]
+}
