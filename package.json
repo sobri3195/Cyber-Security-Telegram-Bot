@@ -1,16 +1,19 @@
 {
   "name": "cyber-security-telegram-bot",
-  "version": "1.0.0",
-  "description": "Telegram bot for cyber security education and tools",
-  "main": "api/webhook.js",
+  "version": "2.0.0",
+  "description": "Telegram bot for cyber security education and tools - Netlify Serverless",
+  "main": "netlify/functions/webhook.js",
   "scripts": {
-    "start": "node api/webhook.js",
-    "dev": "vercel dev"
+    "dev": "netlify dev",
+    "build": "echo 'No build step required'",
+    "deploy": "netlify deploy --prod"
   },
   "dependencies": {
-    "express": "^4.18.2",
     "node-fetch": "^2.6.7",
     "xml2js": "^0.5.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^15.0.0"
   },
   "engines": {
     "node": ">=16.0.0"
@@ -19,9 +22,11 @@
     "telegram",
     "bot",
     "cyber-security",
-    "vercel",
-    "serverless"
+    "netlify",
+    "serverless",
+    "security",
+    "education"
   ],
-  "author": "Cyber Security Bot",
+  "author": "Letda Kes dr. Muhammad Sobri Maulana, S.Kom, CEH, OSCP, OSCE",
   "license": "MIT"
 }
