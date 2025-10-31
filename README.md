@@ -1,6 +1,6 @@
 # 🔐 Cyber Security Telegram Bot
 
-Bot Telegram berbasis webhook untuk edukasi dan tools cyber security yang di-host di Netlify (serverless).
+Bot Telegram berbasis webhook untuk edukasi dan tools cyber security yang di-host di Netlify (serverless) dengan **React Frontend Animasi Interaktif**.
 
 ## 🤖 Bot Information
 
@@ -18,6 +18,22 @@ Bot Telegram berbasis webhook untuk edukasi dan tools cyber security yang di-hos
 - **GitHub:** [github.com/sobri3195](https://github.com/sobri3195)
 - **Email:** muhammadsobrimaulana31@gmail.com
 - **Donasi:** [https://lynk.id/muhsobrimaulana](https://lynk.id/muhsobrimaulana)
+
+## ✨ React Frontend (NEW!)
+
+Website landing page dengan animasi interaktif yang menampilkan:
+- 🎨 **Animated Hero Section** dengan floating logo dan particles background
+- 📊 **Features Showcase** dengan glassmorphism cards dan hover effects
+- 📖 **Commands List** dengan category filtering dan smooth transitions
+- 🛠️ **Security Tools** showcase dengan animated icons
+- 📱 **Fully Responsive** design untuk semua device
+- ⚡ **Performance Optimized** dengan bundle size < 90KB
+
+**Dokumentasi Lengkap:**
+- 📚 [REACT_FRONTEND.md](REACT_FRONTEND.md) - Feature documentation
+- 🚀 [DEPLOY_GUIDE.md](DEPLOY_GUIDE.md) - Deployment guide
+- ⚡ [QUICK_START_REACT.md](QUICK_START_REACT.md) - Quick start
+- 📝 [SUMMARY_REACT.md](SUMMARY_REACT.md) - Implementation summary
 
 ## 🌟 Fitur Utama
 
@@ -57,24 +73,39 @@ Bot ini memiliki **20+ fitur lengkap** untuk cyber security:
 
 ## 🚀 Teknologi
 
+- **Frontend:** React 18 + Framer Motion (Animated UI)
 - **Backend:** Node.js + Netlify Functions
-- **Hosting:** Netlify (serverless)
+- **Hosting:** Netlify (serverless + static)
 - **Database:** File JSON lokal (tanpa database eksternal)
 - **API:** Telegram Bot API dengan webhook
 - **RSS:** Fetch RSS dari The Hacker News
-- **Architecture:** Serverless functions
+- **Architecture:** Serverless functions + SPA
 
 ## 📁 Struktur File
 
 ```
+├── src/                    # React source code
+│   ├── App.js             # Main React component
+│   ├── index.js           # React entry point
+│   └── components/        # React components (animated UI)
+│       ├── Hero.js        # Hero section with animations
+│       ├── Features.js    # Features showcase
+│       ├── Commands.js    # Bot commands list
+│       ├── Tools.js       # Security tools
+│       ├── Footer.js      # Footer section
+│       └── ParticlesBackground.js  # Animated background
+├── public/                # Static files
+│   ├── index.html         # HTML template
+│   └── manifest.json      # PWA manifest
+├── build/                 # Production build (generated)
 ├── netlify/
-│   └── functions/          # Netlify serverless functions
-│       ├── webhook.js      # Main bot logic (webhook handler)
+│   └── functions/         # Netlify serverless functions
+│       ├── webhook.js     # Main bot logic (webhook handler)
 │       ├── setup-webhook.js # Webhook setup endpoint
-│       └── health.js       # Health check endpoint
+│       └── health.js      # Health check endpoint
 ├── utils/
-│   ├── dataManager.js      # User & data management
-│   ├── security.js         # Security utilities (password, phishing)
+│   ├── dataManager.js     # User & data management
+│   ├── security.js        # Security utilities (password, phishing)
 │   └── news.js            # RSS news service
 ├── data/
 │   ├── glossary.json      # Cyber security terms dictionary
@@ -82,7 +113,10 @@ Bot ini memiliki **20+ fitur lengkap** untuk cyber security:
 │   └── users.json         # User database
 ├── netlify.toml           # Netlify configuration
 ├── package.json           # Dependencies
-└── README.md              # This file
+├── README.md              # This file
+├── REACT_FRONTEND.md      # React frontend documentation
+├── DEPLOY_GUIDE.md        # Deployment guide
+└── QUICK_START_REACT.md   # Quick start guide
 ```
 
 ## 🛠️ Instalasi & Setup

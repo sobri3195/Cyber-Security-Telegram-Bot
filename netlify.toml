@@ -1,6 +1,7 @@
 [build]
+  command = "npm run build"
   functions = "netlify/functions"
-  publish = "."
+  publish = "build"
 
 [functions]
   node_bundler = "esbuild"
@@ -18,4 +19,9 @@
 [[redirects]]
   from = "/api/health"
   to = "/.netlify/functions/health"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200
