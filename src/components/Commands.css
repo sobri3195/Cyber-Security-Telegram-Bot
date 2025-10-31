@@ -1,0 +1,117 @@
+.commands {
+  background: linear-gradient(135deg, rgba(118, 75, 162, 0.2) 0%, rgba(102, 126, 234, 0.2) 100%);
+}
+
+.category-filters {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.filter-btn.active {
+  background: white;
+  color: #667eea;
+  border-color: white;
+}
+
+.filter-icon {
+  font-size: 18px;
+}
+
+.commands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.command-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 15px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.command-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+}
+
+.command-content {
+  flex: 1;
+}
+
+.command-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+  font-family: 'Courier New', monospace;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.command-desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .category-filters {
+    gap: 10px;
+  }
+
+  .filter-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .commands-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .command-card {
+    padding: 20px;
+  }
+
+  .command-icon {
+    font-size: 28px;
+  }
+
+  .command-name {
+    font-size: 16px;
+  }
+}

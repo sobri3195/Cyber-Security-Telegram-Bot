@@ -1,0 +1,107 @@
+.tools {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.tool-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 35px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tool-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.tool-icon {
+  font-size: 70px;
+  margin-bottom: 20px;
+  display: inline-block;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+}
+
+.tool-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.tool-category {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.tool-description {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.tools-cta {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  color: #667eea;
+  padding: 18px 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  box-shadow: 0 12px 35px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.cta-button span {
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tool-card {
+    padding: 30px 20px;
+  }
+
+  .tool-icon {
+    font-size: 60px;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 350px;
+    justify-content: center;
+  }
+}

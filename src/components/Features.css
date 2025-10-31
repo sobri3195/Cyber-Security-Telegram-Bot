@@ -1,0 +1,80 @@
+.features {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.feature-icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+  display: inline-block;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+}
+
+.feature-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.feature-description {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.feature-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-items li {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-check {
+  color: #4ade80;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 30px 20px;
+  }
+}
