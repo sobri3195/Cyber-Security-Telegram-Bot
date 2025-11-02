@@ -69,6 +69,18 @@ Bot ini akan membantu Anda belajar tentang keamanan siber.
 • /quiz - Kuis cyber security
 • /events - Event keamanan
 
+🆕 **Fitur Baru:**
+• /incident - Panduan incident response
+• /vpn - Panduan VPN dan privasi
+• /backup - Strategi backup data
+• /firewall - Konfigurasi firewall
+• /vulnerability - Manajemen kerentanan
+• /training - Security awareness training
+• /compliance - Standard compliance (ISO, GDPR)
+• /threat - Threat landscape terkini
+• /forensics - Digital forensics basics
+• /iot - Keamanan IoT devices
+
 🔒 *Tetap aman di dunia digital!*
 
 ---
@@ -109,6 +121,17 @@ async function handleHelp(chatId) {
 
 🎭 **Simulasi:**
 /simulate phishing - Simulasi serangan phishing
+
+🆕 **Fitur Advanced:**
+• /incident - Panduan incident response
+• /vpn - Panduan VPN dan privasi online
+• /backup - Strategi backup data (3-2-1)
+• /firewall - Konfigurasi dan best practices firewall
+• /vulnerability - Vulnerability management
+• /compliance - Standard compliance (ISO 27001, GDPR, PCI DSS)
+• /forensics - Digital forensics basics
+• /iot - Keamanan IoT devices
+• /training - Security awareness training
 
 💬 **Auto-reply:** Bot akan otomatis menjawab pertanyaan umum tentang cyber security.`;
 
@@ -445,6 +468,1005 @@ async function handleEvents(chatId) {
   }
 }
 
+async function handleIncident(chatId) {
+  const message = `🚨 *PANDUAN INCIDENT RESPONSE*
+
+**📋 Tahapan Incident Response:**
+
+**1️⃣ Persiapan (Preparation)**
+• Buat tim incident response
+• Siapkan tools dan prosedur
+• Dokumentasikan contact person
+• Latihan rutin incident handling
+
+**2️⃣ Identifikasi (Identification)**
+• Deteksi anomali sistem
+• Verifikasi apakah benar insiden
+• Klasifikasi tingkat keparahan
+• Dokumentasikan bukti awal
+
+**3️⃣ Pembatasan (Containment)**
+• Isolasi sistem yang terinfeksi
+• Putuskan akses jaringan
+• Backup sistem untuk forensik
+• Cegah penyebaran lebih lanjut
+
+**4️⃣ Pemulihan (Eradication)**
+• Hapus malware/threat
+• Patch vulnerability
+• Strengthen security controls
+• Restore dari backup bersih
+
+**5️⃣ Recovery**
+• Kembalikan sistem ke operasi normal
+• Monitor ketat untuk reinfeksi
+• Validasi sistem berjalan normal
+• Update security measures
+
+**6️⃣ Lessons Learned**
+• Review insiden dan response
+• Dokumentasi lengkap
+• Update prosedur
+• Training tambahan jika perlu
+
+🔒 *Kecepatan response sangat penting dalam menangani insiden keamanan!*`;
+
+  await sendMessage(chatId, message);
+}
+
+async function handleVPN(chatId) {
+  const message = `🔐 *PANDUAN VPN (Virtual Private Network)*
+
+**🎯 Apa itu VPN?**
+VPN adalah layanan yang mengenkripsi koneksi internet Anda dan menyembunyikan identitas online dengan mengalihkan traffic melalui server VPN.
+
+**✅ Manfaat VPN:**
+• Enkripsi data dan privasi online
+• Bypass geo-restrictions
+• Keamanan di WiFi publik
+• Anonimitas browsing
+• Proteksi dari ISP tracking
+
+**🛡️ Rekomendasi VPN Terpercaya:**
+• **NordVPN** - Security kuat, banyak server
+• **ExpressVPN** - Cepat dan reliable
+• **ProtonVPN** - Privacy-focused, ada free tier
+• **Surfshark** - Unlimited devices
+• **Mullvad** - Anonymous payment
+
+**⚠️ Yang Harus Dihindari:**
+• Free VPN mencurigakan (jual data)
+• VPN tanpa no-logs policy
+• VPN dengan jurisdiction buruk
+• VPN dengan enkripsi lemah
+
+**🔒 Tips Memilih VPN:**
+• Pilih yang punya no-logs policy
+• Cek lokasi jurisdiction
+• Pastikan enkripsi AES-256
+• Support kill switch
+• Transparent tentang ownership
+
+**💡 Kapan Harus Pakai VPN:**
+• Menggunakan WiFi publik
+• Akses remote ke kantor
+• Privacy browsing
+• Bypass censorship
+• Download/upload sensitif
+
+🔐 *VPN bukan solusi sempurna, tapi layer security penting untuk online privacy!*`;
+
+  await sendMessage(chatId, message);
+}
+
+async function handleBackup(chatId) {
+  const message = `💾 *STRATEGI DATA BACKUP*
+
+**🎯 Prinsip 3-2-1 Backup:**
+• **3** - Simpan 3 copy data Anda
+• **2** - Gunakan 2 jenis media berbeda
+• **1** - Simpan 1 copy offsite/cloud
+
+**📋 Jenis Backup:**
+
+**1️⃣ Full Backup**
+• Backup semua data
+• Paling lama, paling besar
+• Recovery paling mudah
+• Lakukan bulanan
+
+**2️⃣ Incremental Backup**
+• Hanya backup perubahan sejak backup terakhir
+• Cepat dan hemat storage
+• Recovery butuh semua incremental
+• Lakukan harian
+
+**3️⃣ Differential Backup**
+• Backup perubahan sejak full backup terakhir
+• Lebih cepat dari full
+• Recovery hanya butuh full + differential terakhir
+• Lakukan mingguan
+
+**🛠️ Tools Backup Populer:**
+• **Cloud:** Google Drive, Dropbox, OneDrive, Backblaze
+• **Local:** Windows Backup, Time Machine (Mac)
+• **Enterprise:** Veeam, Acronis, Veritas
+
+**✅ Best Practices:**
+• Otomatis backup (scheduled)
+• Enkripsi backup data
+• Test restore secara berkala
+• Versioning untuk file penting
+• Monitor backup success/failure
+• Document recovery procedures
+
+**⚠️ Kesalahan Umum:**
+• Hanya satu copy data
+• Tidak test restore
+• Backup dan original di lokasi sama
+• Tidak enkripsi backup
+• Tidak monitor backup jobs
+
+**🔒 Data Prioritas Backup:**
+• Dokumen penting
+• Foto dan video pribadi
+• Email dan kontak
+• Database aplikasi
+• Configuration files
+• Financial records
+
+💾 *Backup adalah insurance policy untuk data Anda. Jangan tunggu kehilangan data baru backup!*`;
+
+  await sendMessage(chatId, message);
+}
+
+async function handleFirewall(chatId) {
+  const message = `🔥 *PANDUAN FIREWALL*
+
+**🎯 Apa itu Firewall?**
+Firewall adalah sistem keamanan jaringan yang memonitor dan mengontrol traffic masuk/keluar berdasarkan aturan keamanan yang ditentukan.
+
+**📊 Jenis Firewall:**
+
+**1️⃣ Network Firewall**
+• Proteksi level jaringan
+• Hardware atau software based
+• Filter berdasarkan IP, port, protocol
+
+**2️⃣ Application Firewall (WAF)**
+• Proteksi level aplikasi
+• Filter HTTP/HTTPS traffic
+• Deteksi SQL injection, XSS
+
+**3️⃣ Host-based Firewall**
+• Firewall di device individual
+• Windows Firewall, iptables
+• Kontrol granular per aplikasi
+
+**4️⃣ Next-Gen Firewall (NGFW)**
+• Deep packet inspection
+• Intrusion prevention
+• Application awareness
+
+**🛡️ Firewall Populer:**
+• **pfSense** - Open source, powerful
+• **OPNsense** - Fork pfSense, modern UI
+• **Fortinet** - Enterprise grade
+• **Palo Alto** - Leader NGFW
+• **Cisco ASA** - Industry standard
+
+**✅ Best Practices:**
+
+**1. Default Deny Policy**
+• Block semua, allow yang perlu
+• Whitelist approach
+
+**2. Principle of Least Privilege**
+• Buka port minimal
+• Restrict by IP jika memungkinkan
+
+**3. Regular Rules Review**
+• Audit rules berkala
+• Hapus unused rules
+• Document setiap rule
+
+**4. Logging & Monitoring**
+• Enable firewall logs
+• Monitor suspicious traffic
+• Alert on anomalies
+
+**5. Segmentation**
+• Segment network by function
+• DMZ untuk public services
+• Internal network isolation
+
+**🔒 Konfigurasi Dasar:**
+• Block incoming default
+• Allow outgoing default
+• Allow established connections
+• Block known bad IPs
+• Rate limiting untuk DoS
+• Geo-blocking jika perlu
+
+**⚠️ Kesalahan Umum:**
+• Allow all untuk troubleshooting (lupa revert)
+• Tidak review rules lama
+• Firewall tidak update
+• Tidak backup config
+• Bypass firewall untuk convenience
+
+🔥 *Firewall adalah garis pertahanan pertama. Configure dengan benar!*`;
+
+  await sendMessage(chatId, message);
+}
+
+async function handleVulnerability(chatId) {
+  const message = `🛡️ *VULNERABILITY & PENCEGAHAN*
+
+**🎯 Top 10 Vulnerabilities (OWASP):**
+
+**1️⃣ Injection**
+• SQL, NoSQL, OS command injection
+• **Pencegahan:** Prepared statements, input validation
+
+**2️⃣ Broken Authentication**
+• Session hijacking, credential stuffing
+• **Pencegahan:** MFA, secure session management
+
+**3️⃣ Sensitive Data Exposure**
+• Data tidak terenkripsi
+• **Pencegahan:** Enkripsi at-rest dan in-transit
+
+**4️⃣ XML External Entities (XXE)**
+• XML processor vulnerability
+• **Pencegahan:** Disable XML external entities
+
+**5️⃣ Broken Access Control**
+• Unauthorized access ke resources
+• **Pencegahan:** Enforce access control checks
+
+**6️⃣ Security Misconfiguration**
+• Default settings, verbose errors
+• **Pencegahan:** Hardening, disable unnecessary features
+
+**7️⃣ Cross-Site Scripting (XSS)**
+• Inject malicious scripts
+• **Pencegahan:** Output encoding, CSP headers
+
+**8️⃣ Insecure Deserialization**
+• Remote code execution
+• **Pencegahan:** Integrity checks, restrict deserialization
+
+**9️⃣ Using Components with Known Vulnerabilities**
+• Outdated libraries
+• **Pencegahan:** Dependency scanning, regular updates
+
+**🔟 Insufficient Logging & Monitoring**
+• Delayed breach detection
+• **Pencegahan:** Comprehensive logging, SIEM
+
+**🔍 Vulnerability Management:**
+
+**1. Discovery**
+• Vulnerability scanning
+• Penetration testing
+• Code review
+• Dependency checking
+
+**2. Assessment**
+• CVSS scoring
+• Business impact analysis
+• Exploitability assessment
+
+**3. Prioritization**
+• Critical first
+• Risk-based approach
+• Consider business context
+
+**4. Remediation**
+• Patch management
+• Configuration changes
+• Compensating controls
+
+**5. Verification**
+• Retest after fix
+• Regression testing
+• Documentation
+
+**🛠️ Tools Scanning:**
+• **Nessus** - Vulnerability scanner
+• **OpenVAS** - Open source scanner
+• **Qualys** - Cloud-based scanning
+• **Burp Suite** - Web app testing
+• **OWASP ZAP** - Web app scanner
+• **Snyk** - Dependency scanning
+
+**✅ Best Practices:**
+• Regular vulnerability scans
+• Patch management program
+• Security development lifecycle
+• Continuous monitoring
+• Security training developer
+
+🛡️ *Vulnerability management adalah proses berkelanjutan, bukan one-time activity!*`;
+
+  await sendMessage(chatId, message);
+}
+
+async function handleTraining(chatId) {
+  const message = `🎓 *SECURITY AWARENESS TRAINING*
+
+**🎯 Mengapa Training Penting?**
+Human adalah weakest link dalam security. 90% breach dimulai dari human error. Training yang efektif bisa reduce risk hingga 70%.
+
+**📚 Topik Training Essensial:**
+
+**1️⃣ Password Security**
+• Cara membuat password kuat
+• Password manager usage
+• Multi-factor authentication
+• Bahaya password reuse
+
+**2️⃣ Phishing Awareness**
+• Recognizing phishing emails
+• Suspicious link checking
+• Social engineering tactics
+• Reporting procedures
+
+**3️⃣ Data Protection**
+• Classification data
+• Proper data handling
+• Encryption usage
+• Privacy compliance (GDPR, etc)
+
+**4️⃣ Physical Security**
+• Clean desk policy
+• Device locking
+• Visitor management
+• Tailgating prevention
+
+**5️⃣ Mobile & Remote Work**
+• BYOD best practices
+• Public WiFi dangers
+• VPN usage
+• Remote access security
+
+**6️⃣ Incident Response**
+• Recognizing incidents
+• Reporting channels
+• Initial response steps
+• Don't panic procedures
+
+**🎓 Platform Training:**
+• **KnowBe4** - Comprehensive, phishing simulation
+• **SANS Security Awareness** - Industry leader
+• **Cybrary** - Free courses
+• **Udemy** - Affordable courses
+• **Coursera** - University courses
+• **LinkedIn Learning** - Professional courses
+
+**📋 Training Program Structure:**
+
+**1. Initial Training (Onboarding)**
+• 1-2 jam comprehensive
+• Cover all essential topics
+• Interactive dan engaging
+
+**2. Regular Refreshers**
+• Quarterly 15-30 menit
+• Focus on new threats
+• Reinforce key concepts
+
+**3. Targeted Training**
+• Role-specific training
+• Based on assessment results
+• Address specific weaknesses
+
+**4. Phishing Simulations**
+• Monthly simulated attacks
+• Track click rates
+• Immediate training for clickers
+
+**5. Measurement & Improvement**
+• Pre and post assessments
+• Track metrics over time
+• Adjust based on results
+
+**📊 Metrics to Track:**
+• Training completion rates
+• Assessment scores
+• Phishing simulation click rates
+• Time to complete training
+• Incident reports from trained users
+
+**💡 Tips Effective Training:**
+• Keep it short and engaging
+• Use real-world examples
+• Gamification
+• Regular reinforcement
+• Executive buy-in
+• Make it mandatory
+• Provide incentives
+
+**🎯 Free Resources:**
+• NIST Cybersecurity Framework
+• CISA Security Tips
+• OWASP Training Materials
+• YouTube security channels
+• Security podcasts
+
+🎓 *Invest in people security = Invest in organizational security!*`;
+
+  await sendMessage(chatId, message);
+}
+
+async function handleCompliance(chatId) {
+  const message = `📜 *SECURITY COMPLIANCE STANDARDS*
+
+**🎯 Mengapa Compliance Penting?**
+• Legal requirements
+• Customer trust
+• Avoid penalties
+• Industry standards
+• Risk management
+
+**🌐 Global Standards:**
+
+**1️⃣ ISO/IEC 27001**
+• Information Security Management System (ISMS)
+• International standard
+• Risk-based approach
+• Applicable semua organisasi
+• **Benefit:** Global recognition, systematic approach
+
+**2️⃣ GDPR (General Data Protection Regulation)**
+• EU data protection law
+• Applies ke EU citizens data
+• Consent, data rights, breach notification
+• **Penalty:** Up to €20M atau 4% revenue
+• **Scope:** Privacy, data protection
+
+**3️⃣ PCI DSS**
+• Payment Card Industry Data Security Standard
+• Protect cardholder data
+• 12 requirements, 6 control objectives
+• **Mandatory:** Semua yang process payments
+• **Scope:** Payment security
+
+**4️⃣ SOC 2**
+• Service Organization Control
+• For service providers
+• 5 trust principles
+• **Type I:** Design, **Type II:** Effectiveness
+• **Scope:** Cloud services, SaaS
+
+**5️⃣ HIPAA**
+• Health Insurance Portability and Accountability Act
+• US healthcare data protection
+• PHI (Protected Health Information)
+• **Scope:** Healthcare, health tech
+
+**🇮🇩 Indonesia Regulations:**
+
+**1. UU ITE (Undang-Undang Informasi dan Transaksi Elektronik)**
+• Cybercrime law
+• Electronic signatures
+• Data protection
+
+**2. Peraturan OJK tentang Keamanan Informasi**
+• Financial sector
+• Risk management
+• Incident reporting
+
+**3. Peraturan Menkominfo tentang Perlindungan Data Pribadi**
+• Personal data protection
+• Consent requirements
+• Cross-border data transfer
+
+**✅ Compliance Checklist:**
+
+**ISO 27001:**
+□ Risk assessment
+□ Statement of Applicability
+□ Information security policies
+□ Access control
+□ Cryptography
+□ Physical security
+□ Incident management
+□ Business continuity
+□ Compliance audits
+
+**GDPR:**
+□ Data inventory
+□ Privacy notices
+□ Consent mechanisms
+□ Data subject rights processes
+□ DPO appointment (if required)
+□ Data breach procedures
+□ DPIA for high-risk processing
+□ Vendor agreements
+
+**PCI DSS:**
+□ Firewall configuration
+□ No default passwords
+□ Protect stored cardholder data
+□ Encrypt transmission
+□ Antivirus
+□ Secure systems
+□ Access control
+□ Unique IDs
+□ Restrict physical access
+□ Track and monitor
+□ Regular testing
+□ Information security policy
+
+**🛠️ Compliance Tools:**
+• **Vanta** - Automate compliance
+• **Drata** - Continuous compliance
+• **Secureframe** - SOC 2, ISO 27001
+• **TrustArc** - Privacy compliance
+• **OneTrust** - Privacy management
+
+**💡 Compliance Tips:**
+• Start early
+• Get executive buy-in
+• Assign ownership
+• Document everything
+• Regular audits
+• Use frameworks
+• Automate where possible
+• Employee training
+• Continuous monitoring
+
+📜 *Compliance bukan hanya checkbox, tapi foundation untuk security yang baik!*`;
+
+  await sendMessage(chatId, message);
+}
+
+async function handleThreat(chatId) {
+  const message = `⚠️ *CURRENT THREAT LANDSCAPE*
+
+**🎯 Top Cyber Threats 2024:**
+
+**1️⃣ Ransomware**
+• **Trend:** Ransomware-as-a-Service (RaaS)
+• **Target:** Healthcare, education, government
+• **Tactic:** Double extortion (encrypt + leak)
+• **Example:** LockBit, BlackCat, ALPHV
+• **Impact:** Millions in ransom, operational downtime
+
+**2️⃣ Phishing & Social Engineering**
+• **Trend:** AI-powered phishing, deepfakes
+• **Vector:** Email, SMS (smishing), voice (vishing)
+• **Tactic:** CEO fraud, credential harvesting
+• **Success Rate:** 30% click rate on targeted campaigns
+• **Impact:** Data breach, financial loss
+
+**3️⃣ Supply Chain Attacks**
+• **Trend:** Targeting vendors dan third-parties
+• **Vector:** Software dependencies, managed services
+• **Example:** SolarWinds, Kaseya, Log4Shell
+• **Tactic:** Compromise one, impact many
+• **Impact:** Widespread compromise
+
+**4️⃣ Zero-Day Exploits**
+• **Trend:** Increase in 0-day discoveries
+• **Target:** Microsoft, Apple, Google products
+• **Market:** Dark web, nation-state actors
+• **Speed:** Exploited within hours
+• **Impact:** Unpatched vulnerabilities exploited
+
+**5️⃣ Cloud Misconfigurations**
+• **Trend:** Rapid cloud adoption, complexity
+• **Error:** Public S3 buckets, weak access controls
+• **Impact:** Data leaks, unauthorized access
+• **Stats:** 80% of cloud breaches due to misconfiguration
+
+**6️⃣ IoT & OT Attacks**
+• **Trend:** More connected devices
+• **Target:** Smart home, industrial systems
+• **Weakness:** Default passwords, no updates
+• **Impact:** Botnets (Mirai), industrial sabotage
+
+**7️⃣ AI-Powered Attacks**
+• **Trend:** AI untuk automate dan scale attacks
+• **Usage:** Password cracking, social engineering
+• **Example:** ChatGPT untuk phishing emails
+• **Defense:** Harder to detect automated attacks
+
+**8️⃣ Cryptocurrency Threats**
+• **Trend:** Cryptojacking, crypto scams
+• **Target:** Exchange hacks, wallet theft
+• **Tactic:** Mining malware, rug pulls
+• **Impact:** Financial loss, resource theft
+
+**🔍 Threat Intelligence Sources:**
+• **CISA Alerts** - cisa.gov/uscert
+• **MITRE ATT&CK** - attack.mitre.org
+• **US-CERT** - us-cert.gov
+• **Krebs on Security** - krebsonsecurity.com
+• **Threat Post** - threatpost.com
+• **The Hacker News** - thehackernews.com
+
+**📊 Key Statistics:**
+• Cyber attack every 39 seconds
+• Average breach cost: $4.45M
+• 95% breaches caused by human error
+• 43% attacks target small business
+• 68% breaches take months to discover
+
+**🛡️ Defense Strategy:**
+
+**1. Prevention:**
+• Patch management
+• Security awareness training
+• Network segmentation
+• Least privilege access
+
+**2. Detection:**
+• SIEM monitoring
+• Threat intelligence feeds
+• Anomaly detection
+• Regular audits
+
+**3. Response:**
+• Incident response plan
+• Forensic capabilities
+• Communication plan
+• Recovery procedures
+
+**4. Resilience:**
+• Regular backups
+• Business continuity plan
+• Disaster recovery
+• Insurance coverage
+
+**💡 Emerging Threats to Watch:**
+• Quantum computing impact on encryption
+• 5G security implications
+• Deep fake technology
+• AI model poisoning
+• Space-based infrastructure attacks
+
+⚠️ *Stay informed, stay prepared. Threat landscape constantly evolving!*`;
+
+  await sendMessage(chatId, message);
+}
+
+async function handleForensics(chatId) {
+  const message = `🔬 *DIGITAL FORENSICS BASICS*
+
+**🎯 Apa itu Digital Forensics?**
+Digital forensics adalah proses mengidentifikasi, mengamankan, menganalisis, dan menyajikan bukti digital untuk investigasi insiden keamanan atau kejahatan siber.
+
+**📋 Tahapan Digital Forensics:**
+
+**1️⃣ Identification (Identifikasi)**
+• Deteksi insiden terjadi
+• Tentukan scope investigation
+• Identify potential evidence sources
+• Document initial state
+
+**2️⃣ Preservation (Preservasi)**
+• Isolasi dan secure crime scene
+• Prevent evidence contamination
+• Chain of custody documentation
+• Create forensic images
+
+**3️⃣ Collection (Pengumpulan)**
+• Forensic imaging (bit-by-bit copy)
+• Collect volatile data (RAM, network)
+• Log files, system files
+• Maintain integrity (hash values)
+
+**4️⃣ Analysis (Analisis)**
+• Examine forensic images
+• Timeline reconstruction
+• Identify artifacts
+• Correlate evidence
+• Use forensic tools
+
+**5️⃣ Reporting (Pelaporan)**
+• Document findings
+• Create timeline
+• Provide conclusions
+• Expert testimony ready
+
+**🛠️ Forensic Tools:**
+
+**Disk Forensics:**
+• **Autopsy/Sleuth Kit** - Open source suite
+• **FTK (Forensic Toolkit)** - Commercial, powerful
+• **EnCase** - Industry standard
+• **X-Ways Forensics** - Fast, efficient
+
+**Memory Forensics:**
+• **Volatility** - RAM analysis framework
+• **Rekall** - Memory forensic framework
+• **DumpIt** - Memory acquisition
+
+**Network Forensics:**
+• **Wireshark** - Packet analyzer
+• **NetworkMiner** - PCAP analysis
+• **Zeek (Bro)** - Network monitoring
+
+**Mobile Forensics:**
+• **Cellebrite** - Mobile extraction
+• **Oxygen Forensics** - Mobile analysis
+• **AXIOM** - Mobile & computer forensics
+
+**🔍 Types of Evidence:**
+
+**1. Volatile Evidence (Hilang saat power off):**
+• RAM contents
+• Running processes
+• Network connections
+• Clipboard data
+• Registry keys in memory
+
+**2. Non-Volatile Evidence:**
+• Hard drive contents
+• USB devices
+• Log files
+• Email archives
+• Browser history
+
+**3. Network Evidence:**
+• Firewall logs
+• IDS/IPS alerts
+• Packet captures
+• DNS logs
+• Proxy logs
+
+**📊 Forensic Artifacts:**
+• **Windows:** Event Logs, Registry, Prefetch, USN Journal
+• **Linux:** /var/log/, bash_history, cron jobs
+• **Browser:** History, cookies, cache, downloads
+• **Email:** PST/OST files, email headers
+• **Mobile:** SMS, call logs, app data, location history
+
+**✅ Best Practices:**
+
+**1. Order of Volatility:**
+Collect most volatile first:
+• Registers, cache
+• Routing table, ARP cache, process table
+• Memory
+• Temporary file systems
+• Disk
+• Remote logging and monitoring data
+• Physical configuration, network topology
+• Archival media
+
+**2. Chain of Custody:**
+• Document who, what, when, where
+• Every transfer logged
+• Secure storage
+• Limited access
+
+**3. Forensic Soundness:**
+• Write blockers untuk acquisition
+• Hash verification (MD5, SHA-256)
+• Work on copies, never originals
+• Document every action
+
+**4. Legal Considerations:**
+• Proper authorization
+• Privacy laws compliance
+• Admissibility of evidence
+• Expert witness testimony
+
+**⚠️ Common Mistakes:**
+• Working on original evidence
+• No hash verification
+• Incomplete documentation
+• Breaking chain of custody
+• Not collecting volatile data
+• Delayed response
+
+**💡 Career Path:**
+• CompTIA Security+
+• EnCase Certified Examiner (EnCE)
+• GIAC Certified Forensic Analyst (GCFA)
+• Certified Computer Examiner (CCE)
+• CHFI (Computer Hacking Forensic Investigator)
+
+🔬 *Digital forensics requires technical skills, attention to detail, dan understanding of legal requirements!*`;
+
+  await sendMessage(chatId, message);
+}
+
+async function handleIoT(chatId) {
+  const message = `🌐 *IoT SECURITY BEST PRACTICES*
+
+**🎯 Apa itu IoT?**
+Internet of Things (IoT) adalah jaringan perangkat fisik yang terhubung ke internet, mengumpulkan dan berbagi data.
+
+**📱 Contoh Perangkat IoT:**
+• Smart home (lights, thermostats, cameras)
+• Wearables (smartwatch, fitness trackers)
+• Smart appliances (refrigerator, washing machine)
+• Industrial IoT (sensors, controllers)
+• Smart city (traffic lights, parking meters)
+• Healthcare (medical devices, monitors)
+
+**⚠️ Ancaman Keamanan IoT:**
+
+**1️⃣ Weak Authentication**
+• Default passwords (admin/admin)
+• No password change requirement
+• Weak or no encryption
+• **Impact:** Unauthorized access
+
+**2️⃣ Insecure Network Services**
+• Unnecessary open ports
+• Outdated protocols
+• No encryption
+• **Impact:** Network compromise
+
+**3️⃣ Lack of Updates**
+• No firmware updates
+• End of life devices
+• No security patches
+• **Impact:** Known vulnerabilities exploited
+
+**4️⃣ Physical Security**
+• Easy physical access
+• No tamper detection
+• Debug ports accessible
+• **Impact:** Device manipulation
+
+**5️⃣ Privacy Concerns**
+• Data collection tanpa consent
+• Data sharing dengan third parties
+• Location tracking
+• **Impact:** Privacy violation
+
+**🛡️ IoT Security Best Practices:**
+
+**1. Device Level:**
+
+**Before Purchase:**
+□ Research security track record
+□ Check update policy
+□ Read privacy policy
+□ Prefer reputable brands
+
+**Setup:**
+□ Change default password immediately
+□ Use strong, unique passwords
+□ Update firmware to latest
+□ Disable unnecessary features
+□ Review privacy settings
+
+**Ongoing:**
+□ Regular firmware updates
+□ Monitor device activity
+□ Review connected apps
+□ Audit device list regularly
+
+**2. Network Level:**
+
+**Network Segmentation:**
+• Separate IoT network dari main network
+• Use VLAN or separate router
+• Limit IoT device communication
+
+**Router Security:**
+• Strong WiFi password (WPA3)
+• Change router admin password
+• Disable WPS
+• Update router firmware
+• Enable firewall
+
+**Access Control:**
+• MAC address filtering
+• Guest network untuk IoT
+• VPN untuk remote access
+• Disable UPnP
+
+**3. Data Level:**
+
+**Data Protection:**
+• Minimize data collection
+• Understand data sharing
+• Review third-party access
+• Regular data audits
+
+**Privacy:**
+• Opt-out of data sharing jika bisa
+• Review app permissions
+• Check privacy policy updates
+• Use privacy-focused alternatives
+
+**🔒 Specific Device Security:**
+
+**Smart Cameras:**
+• Strong passwords
+• Two-factor authentication
+• Encrypt video streams
+• Disable remote access jika tidak perlu
+• Cover camera saat tidak digunakan
+• Regular firmware updates
+
+**Smart Speakers:**
+• Mute when not in use
+• Review voice recordings
+• Limit connected services
+• Strong account password
+• Check activity logs
+
+**Smart Locks:**
+• Backup mechanical key
+• Strong PIN codes
+• Activity monitoring
+• Firmware updates
+• Battery monitoring
+
+**Smart TVs:**
+• Disable camera/mic jika tidak digunakan
+• Review app permissions
+• Limit data collection
+• Update software
+• Secure WiFi
+
+**🏢 Enterprise IoT:**
+
+**Industrial IoT (IIoT):**
+• Network segmentation (IT vs OT)
+• Zero Trust architecture
+• Asset inventory management
+• Threat monitoring
+• Incident response plan
+• Regular security assessments
+
+**Healthcare IoT:**
+• HIPAA compliance
+• Patient data encryption
+• Medical device management
+• Network segmentation
+• Regular vulnerability scans
+
+**🛠️ IoT Security Tools:**
+• **Shodan** - IoT device search engine
+• **IoT Inspector** - Network monitoring
+• **Fing** - Network scanner
+• **Wireshark** - Traffic analysis
+• **Nmap** - Port scanning
+
+**📊 IoT Security Checklist:**
+□ Inventory all IoT devices
+□ Change all default passwords
+□ Update all firmware
+□ Enable encryption where possible
+□ Segment IoT network
+□ Disable unused features
+□ Regular security audits
+□ Monitor device traffic
+□ Plan device retirement
+□ Document device policies
+
+**💡 Future of IoT Security:**
+• Built-in security by design
+• Standardization (IoT Security Foundation)
+• AI-powered threat detection
+• Blockchain for IoT security
+• Quantum-resistant encryption
+
+**⚠️ Red Flags:**
+• No password required
+• No firmware updates available
+• Unclear data sharing practices
+• Poor reviews on security
+• No support or documentation
+• Too cheap to be secure
+
+🌐 *IoT convenience shouldn't compromise security. Secure your connected world!*`;
+
+  await sendMessage(chatId, message);
+}
+
+
 // Auto-reply for general questions
 async function handleAutoReply(chatId, text) {
   const lowerText = text.toLowerCase();
@@ -501,6 +1523,18 @@ Halo ${newMember.first_name || 'Member Baru'}! 👋
 • /checklist - Checklist keamanan
 • /quiz - Kuis cyber security
 • /events - Event keamanan
+
+**🆕 Fitur Baru:**
+• /incident - Panduan incident response
+• /vpn - Panduan VPN
+• /backup - Strategi backup
+• /firewall - Konfigurasi firewall
+• /vulnerability - Manajemen kerentanan
+• /training - Security training
+• /compliance - ISO 27001, GDPR, dll
+• /threat - Threat landscape
+• /forensics - Digital forensics
+• /iot - Keamanan IoT
 
 **🔒 Tetap aman di dunia digital!**
 **📚 Belajar cyber security bersama komunitas ini!**
@@ -608,6 +1642,36 @@ ${left_chat_member.first_name || left_chat_member.username} telah meninggalkan $
             break;
           case '/events':
             await handleEvents(chatId);
+          case '/incident':
+            await handleIncident(chatId);
+            break;
+          case '/vpn':
+            await handleVPN(chatId);
+            break;
+          case '/backup':
+            await handleBackup(chatId);
+            break;
+          case '/firewall':
+            await handleFirewall(chatId);
+            break;
+          case '/vulnerability':
+            await handleVulnerability(chatId);
+            break;
+          case '/training':
+            await handleTraining(chatId);
+            break;
+          case '/compliance':
+            await handleCompliance(chatId);
+            break;
+          case '/threat':
+            await handleThreat(chatId);
+            break;
+          case '/forensics':
+            await handleForensics(chatId);
+            break;
+          case '/iot':
+            await handleIoT(chatId);
+            break;
             break;
           default:
             await sendMessage(chatId, "❌ Perintah tidak dikenal. Gunakan /help untuk melihat daftar perintah yang tersedia.");
