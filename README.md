@@ -11,6 +11,15 @@ Bot Telegram berbasis webhook untuk edukasi dan tools cyber security yang di-hos
 
 > **Note:** Keep your token secure and store it safely. It can be used by anyone to control your bot.
 
+### 🚀 Quick Setup with BotFather
+Need to connect a new bot or configure BotFather? See our comprehensive guides:
+- 🤖 **[BOTFATHER_README.md](BOTFATHER_README.md)** - **START HERE** - Complete overview & quick reference
+- 📖 **[QUICK_START_BOTFATHER.md](QUICK_START_BOTFATHER.md)** - Quick 5-minute setup guide
+- 📘 **[BOTFATHER_SETUP.md](BOTFATHER_SETUP.md)** - Complete BotFather configuration guide
+- 📊 **[BOTFATHER_CONNECTION_FLOW.md](BOTFATHER_CONNECTION_FLOW.md)** - Visual flow diagrams
+- 📝 **[BOTFATHER_QUICK_REFERENCE.md](BOTFATHER_QUICK_REFERENCE.md)** - One-page reference card (printable)
+- ✅ **Validate Connection:** Run `npm run validate-bot` to check your bot connection
+
 ## 👨‍💻 Author
 
 **Letda Kes dr. Muhammad Sobri Maulana, S.Kom, CEH, OSCP, OSCE**
@@ -132,19 +141,37 @@ cd cyber-security-telegram-bot
 npm install
 ```
 
-### 3. Setup Environment Variables
+### 3. Setup Bot dengan BotFather
+**Untuk setup bot baru, ikuti panduan:**
+- 🚀 **Quick Start:** [QUICK_START_BOTFATHER.md](QUICK_START_BOTFATHER.md) (5 menit)
+- 📖 **Complete Guide:** [BOTFATHER_SETUP.md](BOTFATHER_SETUP.md) (panduan lengkap)
+
+**Atau gunakan bot yang sudah ada:**
+- **Bot Username:** @winlincommunity_bot
+- **Bot URL:** t.me/winlincommunity_bot
+- **Token:** 8274287483:AAGiWpxtfRo7ByLagTdH1Cy_TNLths3wCSs
+
+### 4. Setup Environment Variables
 Buat file `.env` atau set di Netlify:
 ```env
 BOT_TOKEN=8274287483:AAGiWpxtfRo7ByLagTdH1Cy_TNLths3wCSs
 WEBHOOK_URL=https://your-app.netlify.app
 ```
 
-**Bot Information:**
-- **Bot Username:** @winlincommunity_bot
-- **Bot URL:** t.me/winlincommunity_bot
-- **Token:** 8274287483:AAGiWpxtfRo7ByLagTdH1Cy_TNLths3wCSs
+### 5. Validasi Koneksi Bot
+Setelah setup, validasi koneksi dengan BotFather:
+```bash
+npm run validate-bot
+```
 
-### 4. Deploy ke Netlify
+Tool ini akan:
+- ✅ Validasi format BOT_TOKEN
+- ✅ Cek koneksi dengan Telegram API
+- ✅ Verify webhook status
+- ✅ List bot commands
+- ✅ Berikan troubleshooting tips jika ada masalah
+
+### 6. Deploy ke Netlify
 
 #### Method 1: Netlify Dashboard (Recommended)
 
@@ -192,7 +219,7 @@ netlify env:set BOT_TOKEN your_bot_token_here
 netlify env:set WEBHOOK_URL https://your-site.netlify.app
 ```
 
-### 5. Setup Webhook
+### 7. Setup Webhook
 Setelah deploy, akses:
 ```
 https://your-site.netlify.app/api/setup-webhook
@@ -338,6 +365,21 @@ npm install -g netlify-cli
 netlify dev
 
 # Test locally at http://localhost:8888
+```
+
+### Available NPM Scripts
+```bash
+# Development
+npm run dev              # Start React development server
+npm run netlify-dev      # Run Netlify functions locally
+
+# Build & Deploy
+npm run build            # Build React frontend
+npm run deploy           # Deploy to Netlify (production)
+
+# Bot Management
+npm run validate-bot     # Validate bot connection with BotFather
+npm run check-bot        # Same as validate-bot (alias)
 ```
 
 ## 🌐 Support & Kontribusi
